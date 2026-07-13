@@ -1,0 +1,121 @@
+# **Java Architecture Diagram and Explanation**
+
+## **Introduction**
+
+Java is a platform-independent programming language that follows the principle **"Write Once, Run Anywhere (WORA)."** This is possible because Java programs are executed through the Java Virtual Machine (JVM), which allows the same program to run on different operating systems without changing the source code.
+
+---
+
+# **Java Architecture Diagram**
+
+```text
+                 Java Source Code (.java)
+                         │
+                         ▼
+              Java Compiler (javac)
+                         │
+                         ▼
+                 Bytecode (.class)
+                         │
+                         ▼
+        +--------------------------------+
+        |              JRE               |
+        |  +--------------------------+  |
+        |  |           JVM            |  |
+        |  |  Executes Bytecode       |  |
+        |  +--------------------------+  |
+        |   Java Libraries & Runtime     |
+        +--------------------------------+
+                         │
+                         ▼
+          Operating System (Windows/Linux/macOS)
+                         │
+                         ▼
+                     Computer Hardware
+
+        JDK = JRE + Development Tools
+```
+
+---
+
+# **Components of Java Architecture**
+
+## **1. JDK (Java Development Kit)**
+
+The Java Development Kit (JDK) is used to develop Java applications. It contains all the tools needed for writing, compiling, debugging, and running Java programs.
+
+### **Functions of JDK**
+
+* Provides the Java compiler (`javac`)
+* Includes debugging and development tools
+* Contains the JRE
+* Used by software developers
+
+**Example:** A programmer writes a Java program and compiles it using the JDK.
+
+---
+
+## **2. JRE (Java Runtime Environment)**
+
+The Java Runtime Environment (JRE) provides the environment required to run Java applications. It includes the JVM and the necessary Java libraries.
+
+### **Functions of JRE**
+
+* Runs Java applications
+* Provides Java class libraries
+* Includes the JVM
+* Does not include development tools
+
+**Example:** Users only need the JRE to run a Java application; they do not need the JDK.
+
+---
+
+## **3. JVM (Java Virtual Machine)**
+
+The Java Virtual Machine (JVM) is the core component that executes Java bytecode. It converts bytecode into machine code that the operating system can understand.
+
+### **Functions of JVM**
+
+* Executes Java bytecode
+* Converts bytecode into machine code
+* Manages memory
+* Performs garbage collection
+* Provides security and portability
+
+**Example:** The same Java program can run on Windows, Linux, and macOS because each operating system has its own JVM.
+
+---
+
+# **How Java Achieves Platform Independence**
+
+Java achieves platform independence through the following process:
+
+1. The programmer writes the source code (`.java` file).
+2. The Java compiler (`javac`) converts the source code into **bytecode** (`.class` file).
+3. The bytecode is platform-independent.
+4. Each operating system has its own JVM.
+5. The JVM converts the bytecode into machine code that the operating system can execute.
+
+This allows the same Java program to run on multiple operating systems without changing the code.
+
+---
+
+# **Relationship Between JDK, JRE, and JVM**
+
+| Component | Purpose                | Includes                                                |
+| --------- | ---------------------- | ------------------------------------------------------- |
+| **JDK**   | Develops Java programs | JRE + Development tools (Compiler, Debugger, etc.)      |
+| **JRE**   | Runs Java applications | JVM + Java Libraries                                    |
+| **JVM**   | Executes Java bytecode | Memory Management, Garbage Collection, Execution Engine |
+
+---
+
+# **Conclusion**
+
+Java architecture is designed to make programs portable, secure, and efficient. The **JDK** is used to develop Java applications, the **JRE** provides the environment to run them, and the **JVM** executes the bytecode on different operating systems. This architecture enables Java's **"Write Once, Run Anywhere"** feature, making it one of the most popular programming languages for software development.
+
+**References**
+
+1. Oracle Java Documentation
+2. Oracle Java Tutorials
+3. Java Platform Documentation
