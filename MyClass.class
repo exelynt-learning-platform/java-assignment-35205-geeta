@@ -1,0 +1,23 @@
+// This class demonstrates the use of multiple methods in Java.
+public class MyClass {
+
+    // The main method is the entry point of the program.
+    public static void main(String[] args) {
+
+        // Calling the first custom method.
+        greet();
+
+        // Calling the second custom method.
+        showMessage();
+    }
+
+    // This method prints a welcome message.
+    public static void greet() {
+        System.out.println("Welcome to Java Programming!");
+    }
+
+    // This method prints another message.
+    public static void showMessage() {
+        System.out.println("Learning classes and methods is fun!");
+    }
+}
